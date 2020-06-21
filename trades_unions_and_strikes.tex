@@ -1,0 +1,252 @@
+\PassOptionsToPackage{svgnames}{xcolor}
+\documentclass[12pt, a4paper]{book}
+\usepackage{lmodern}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{etoolbox}
+\usepackage[object=vectorian]{pgfornament}
+
+% 裝飾團案
+% https://tex.stackexchange.com/questions/32711/totally-sweet-horizontal-rules-in-latex
+\newcommand{\sectionline}{%
+  \noindent
+  \begin{center}
+  {\color{DarkViolet}
+    \resizebox{0.5\linewidth}{1ex}
+    {{%
+    {\begin{tikzpicture}
+    \node  (C) at (0,0) {};
+    \node (D) at (9,0) {};
+    \path (C) to [ornament=85] (D);
+    \end{tikzpicture}}}}}%
+    \end{center}
+  }
+
+\newcommand{\sectionlinetwo}[2]{%
+  \nointerlineskip \vspace{.5\baselineskip}\hspace{\fill}
+  {\color{#1}
+    \resizebox{0.5\linewidth}{2ex}
+    {{%
+    {\begin{tikzpicture}
+    \node  (C) at (0,0) {};
+    \node (D) at (9,0) {};
+    \path (C) to [ornament=#2] (D);
+    \end{tikzpicture}}}}}%
+    \hspace{\fill}
+    \par\nointerlineskip \vspace{.5\baselineskip}
+  }
+
+% 設置引用格式
+\AtBeginEnvironment{quote}{\singlespacing\small}
+
+\setlength{\parskip}{5pt}
+
+% 用罗马数字做节的数字
+\renewcommand{\thechapter}{\Roman{chapter}.}
+
+\renewcommand*\thesection{\arabic{section}.}
+\renewcommand*\thesubsection{}
+
+% 設置頁眉頁腳
+\pagestyle{fancy}
+\fancyhead{} % clear all fields
+\fancyfoot{} % clear all fields
+
+\fancyhead[LE, RO]{\thepage}
+\renewcommand\chaptermark[1]{\markboth{#1}{}}
+\renewcommand\sectionmark[1]{\markright{ \ #1}}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[RO, RE]{\textit{\rightmark}}
+\fancyhead[LE, LO]{\textit{\leftmark}}
+\fancyfoot[LE, RO]{\thepage}
+
+% 設置章節標題格式
+\titleformat{\chapter}[block]{\centering\Large\bfseries}{\thechapter}{1pt}{\Large}
+\titleformat{\section}[block]{\centering\large\bfseries}{\thesection}{1pt}{\large}
+\titleformat{\subsection}[block]{\centering\large\bfseries}{\thesubsection}{1pt}{\large}
+
+
+\title{\textbf{Trades' Unions and Strikes:\\Their Philosophy and Intention}}
+
+\author{T. J. Dunning}
+\date{1860}
+
+\begin{document}
+
+     \maketitle
+
+    \begin{center}
+        {\LARGE TRADES' UNIONS AND STRIKES}
+
+        \vspace{2em}
+
+        \sectionlinetwo{black}{88}
+    \end{center}
+
+    \vspace{2em}
+
+    {\noindent \textsc{The} object of this pamphlet is to obtain a
+    hearing on the subject of ``Trades' Unions'' and ``Strikes'' from
+    that class who, from their position in society, can only obtain a
+    knowledge of it from the evidence of others. In setting forth the
+    principle which calls Trade Societies into existence, it is not
+    intended to defend all that has been done by Trades' Unions, any
+    more than an advocate of religion would attempt to defend all that
+    has been done in its name by religious professors. Trades'
+    Unionists, generally, are neither writers, nor, to any great extent,
+    able to employ writers in their behalf, nor, indeed, to the limited
+    extent that they are able, do they at present see the necessity of
+    doing so; while, on the contrary, those opposed to them., from their
+    wealth and position in society, form a great part of the very class
+    by whom writers are directly and indirectly supported;---hence,
+    while the press---newspaper and periodical---teems with
+    denunciations against them, scarcely a voice, directly from
+    themselves, is heard through the press in their behalf Indeed, it
+    has been felt by impartial men to be the one great difficulty in the
+    way of understanding the subject, that all they can get hold of on
+    the matter---except the merely local statements relative to a
+    particular strike or dispute, which may then be pending---is
+    exclusively on one side. As far as our limited means and power will
+    enable us, it is intended by this pamphlet to supply that
+    deficiency, by a statement direct from a body of working men, by
+    their accredited agent, of their views on the subject.}
+
+    The principal argument against Trades' Unions is professed to be
+    derived from the alleged ignorance of the working classes of
+    Political Economy. As this term is used by many without having a
+    precise idea of what it is, and by different persons in a different
+    sense, we will commence by very briefly stating the meaning which we
+    attach to it: Political Economy is the science which treats of the
+    principle of exchange in its operation in the production of wealth,
+    and its operation and influence on civilised society.
+
+    Man is said to be an animal---in contradistinction from all others
+   ---that makes exchanges. And it is by the principle of exchange
+    that all the transactions of civilised life are carried on, by
+    which, indeed, civilised society exists and is held together. But if
+    man be an animal that makes exchanges, he undoubtedly retains, in
+    common with the carnivora to which he in part belongs, instincts of
+    a predatory character, and might be defined to be an animal that,
+    besides making exchanges, also steals. The act of exchange embraces
+    every conceivable form in which the subject can be treated, and,
+    indeed, is that out of which the science itself is evolved. It is
+    only necessary, therefore, by analysing this act, to illustrate what
+    we understand by the term Political Economy. By the act of exchange,
+    the four things essential to a civilised community are supposed,
+    without which, indeed, it could not exist, namely.
+    \textsc{Labour}---\textsc{Capital}---the right of \textsc{Individual
+    Appropriation}, or \textsc{Property}---and \textsc{Security}.
+    \textit{Labour}, to produce the thing exchanged; \textit{Capital},
+    in the accumulated labour, which results in the article exchanged;
+    the recognition of \textit{the right of Individual Appropriation},
+    or property, by which the act of exchange takes place, as
+    distinguished from the act of taking or keeping possession of the
+    article by force; and \textit{Security}, which ensures the peaceful
+    continuation of a succession of exchanges to all who have anything
+    to dispose of: the result of the whole, in civilised life, being the
+    four great classes into which society is divided. Labour yielding
+    \textit{wages} giving support to all who labour (using the term in
+    its most extensive sense); capital giving \textit{profit}---the
+    revenue of those who employ capital. The right of individual
+    appropriation, or property, as applied to the land, which, without
+    remark, we take as we find it, gives \textit{rent}, which gives
+    revenue to landlords. And security supposes \textit{taxes}, which
+    support those who defend the country, administer its laws, and
+    tax-receivers in general. This last strongly illustrates what is
+    very little noticed, if at all, by political economists---namely,
+    the predatory instincts of mankind, the omission of which often
+    leads to very great error in the application of rules of political
+    economy, and to none more than to their application to Trades'
+    Unions. And yet these predatory instincts are most unmistakably
+    indicated and provided against by this element of exchange,
+    security, in the absence of which it certainly could not go on, as
+    in communities it requires laws with strong force to support those
+    who administer them and enforce their execution, without which the
+    community could not exist; and in separate nations, armies and
+    fleets for defence, and, as a stronger illustration, for attack. On
+    these four elements of the principle of exchange, without either of
+    which it could not exist, it will be seen the whole system of
+    civilised society rests. We have thus particularised each element,
+    and its respective result, to show that those who live by labour
+    are, by \textit{right}, entitled to their revenue by the simple
+    action of the principle of exchange equally with the other three
+    great divisions of society, as opposed to the confused idea of wages
+    being derived from the relation of master and servant, involving a
+    sort of benevolent patronage on the one side, and obligation on the
+    other. And it will be our object to show, that it is only by trade
+    combinations that the \textit{free} exercise of this principle can
+    be secured to working men.
+
+    Our business, however, is only with the action of the principle of
+    exchange upon wages. It is usual, with a certain class of political
+    economists, of whom A. Black, Esq., M.P., may be considered a fair
+    exponent, to lecture the working classes on the principles of this
+    science. Accordingly, in his recent lecture in Edinburgh, he devotes
+    five, out of the twenty-two pages it comprises, to the consideration
+    of the value of commodities---labour being one in its nature like
+    the rest---which is determined by demand and supply; the pernicious
+    result of monopoly; of capital and labour, and of each being
+    necessary for the employment of the other; that capital will not be
+    employed unless a profit can be obtained by its employment; that
+    when the profit of capital is high in any trade or manufacture, so
+    many will be tempted to embark in it that this high profit will soon
+    be reduced to its ordinary level; and the same with high wages,
+    except they proceed from great skill, which, from the nature of
+    things, must always be rare; and, lastly, if a capitalist has
+    embarked his capital upon the supposition that he has to pay a
+    certain sum for wages, and he is obliged to pay more, his profit
+    will be reduced by that amount, which will be very likely to cause
+    him to withdraw from the business in which he has engaged, and, of
+    course, cease to pay wages, which should be a lesson to workmen not
+    to demand too high wages.
+
+    With due respect for Mr. Black, who doubtless was actuated by a
+    sincere desire to promote what he believed to be the true interests
+    of the working classes, we think, if, instead of puzzling himself
+    and his readers by elaborately explaining the above propositions,
+    which nobody is likely to dispute, and which are, in their
+    enunciation, like that of two and two making four, already at their
+    plainest terms, he had endeavoured to show how it was that these
+    things, which almost everybody knows, failed to convince the working
+    classes that Trades' Unions are unnecessary, and Strikes always
+    pernicious, and shown how they were in error: he would then have
+    conferred a real benefit on the working classes. It is a great
+    mistake, in gentlemen of Mr. Black's position, to suppose that
+    working men are practically ignorant of the truths of political
+    economy. With it as a science they may be ignorant; indeed, some of
+    them may not even know that there is such a science. But these
+    gentlemen seem to forget that political economy is only the
+    compilation into a code of rules the practice of all men in all ages
+    who have bought and sold; have been engaged in commercial
+    transactions; or in any way have made use of the principle of
+    exchange. Every costermonger is obliged to regulate what he does in
+    buying and selling by the law of demand and supply, which if
+    explained to him as being a part of the science of political
+    economy, he would be as much surprised that he had, without knowing
+    it, been practising the science all his life, as the honest
+    gentleman in the French comedy was, on his being taught composition,
+    that he had been talking prose all his life without knowing it.
+    Except in the innocent dulness of the latter, which would certainly
+    not belong to the costermonger, the cases are exactly parallel.
+
+    We therefore will endeavour to show why the above propositions fail
+    in convincing working men that they are doing wrong in entering into
+    combination. Not that these propositions arc doubted, but because
+    implicit belief in them is perfectly consistent with the propriety
+    of Trade Combinations. We shall therefore proceed to consider ---
+
+    \begin{enumerate}[label=\Roman*., leftmargin=2.9cm]
+        \item---Wages, and what determines their value.
+        \item---Trade Societies, for the protection of wages.
+        \item---The means used by them for that purpose.
+    \end{enumerate}
+
+    \include{wages}
+    \include{trade_societies}
+    \include{strikes}
+
+\end{document}
